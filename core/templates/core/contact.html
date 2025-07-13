@@ -1,0 +1,64 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - VA Cafe</title>
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/logo.jpeg' %}" alt="VA Cafe">
+        <h1>VA Ca<span>fe</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/cart/">Cart 🛒</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>Have a question, feedback, or just want to say hello? We'd love to hear from you!</p>
+
+    <div class="contact-form-container">
+      <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <h3>Contact Info</h3>
+        <p><strong>Phone:</strong> +91 12345 67890</p>
+        <p><strong>Email:</strong> hello@vacafe.com</p>
+        <p><strong>Address:</strong> 123 Coffee Street, Bean Town, India</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 VA Cafe. All rights reserved. | Follow us:
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

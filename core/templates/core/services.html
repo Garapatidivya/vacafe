@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services - VA Cafe</title>
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="{% static 'images/logo.jpeg' %}" alt="VA Cafe">
+      <h1>VA Ca<span>fe</span></h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products/">Products</a></li>
+      <li><a href="/services/">Services</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/cart/">Cart 🛒</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<section class="services-section">
+  <h2>Our <span>Services</span></h2>
+  <p class="intro">We offer more than just coffee. Explore how we serve joy!</p>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="{% static 'images/dinein.jpg' %}" alt="Dine In">
+      <h3>Dine-In</h3>
+      <p>Enjoy a cozy café ambiance with friends, books, or work vibes.</p>
+    </div>
+    <div class="service-card">
+      <img src="{% static 'images/takeaway.jpg' %}" alt="Dine In">
+      <h3>Takeaway</h3>
+      <p>Grab your favorite brews on the go, perfectly packed and steaming!</p>
+    </div>
+    <div class="service-card">
+      <img src="{% static 'images/delivery.jpg' %}" alt="Dine In">
+      <h3>Delivery</h3>
+      <p>Get fresh coffee and snacks delivered right to your doorstep.</p>
+    </div>
+    <div class="service-card">
+      <img src="{% static 'images/dinein.jpg' %}" alt="Dine In">
+      <h3>Premium Beans</h3>
+      <p>Order our signature roasted beans to enjoy café coffee at home.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 VA Cafe. All rights reserved. | Follow us:
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Twitter</a>
+  </p>
+</footer>
+
+</body>
+</html>

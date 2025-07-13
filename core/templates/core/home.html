@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VA Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/logo.jpeg' %}" alt="VA Cafe" />
+        <h1>VA Ca<span>fe</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/cart/">Cart 🛒</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+  <section class="home-hero">
+    <div class="overlay-content">
+      <h1 class="title-1">Good cof<span>fee</span> will always <br> Find the audience</h1>
+      <p>Welcome to <strong>VA Cafe</strong> — where every sip tells a story. Whether you’re rushing to work, catching up with a friend, or just taking a moment for yourself, we have the perfect cup waiting for you.</p>
+      <p>We blend tradition with creativity to serve handcrafted coffee, refreshing beverages, delicious snacks, and sweet treats — all made with the finest ingredients.</p>
+      <p>Come in. Sit back. Recharge.</p>
+      <a href="/products/"><button type="button">Explore Our Menu</button></a>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <p>&copy; 2025 VA Cafe. All rights reserved. | Follow us:
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Twitter</a>
+  </p>
+</footer>
+</body>
+</html>

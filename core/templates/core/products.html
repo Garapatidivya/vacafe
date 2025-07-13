@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu - VA Cafe</title>
+  <link rel="stylesheet" href="{% static 'css/products.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/logo.jpeg' %}" alt="VA Cafe">
+        <h1>VA Ca<span>fe</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/cart/">Cart 🛒</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="products-section">
+    <h2>Our <span>Menu</span></h2>
+    <p class="products-intro">Explore our handcrafted selections below</p>
+
+    {% for category in menu_categories %}
+  <h3 class="menu-category">{{ category.0 }}</h3>
+  <div class="product-grid">
+    {% for item in category.1 %}
+      <div class="product-card">
+        <img src="{{ item.image.url }}" alt="{{ item.name }}">
+        <h3>{{ item.name }}</h3>
+        <p class="price">₹{{ item.price }}</p>
+        <p class="desc">{{ item.description }}</p>
+        <button onclick="window.location.href='{% url 'add_to_cart' item.id %}'">Add to Cart</button>
+
+      </div>
+    {% empty %}
+      <p>No items in this category.</p>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 VA Cafe. All rights reserved. | Follow us:
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

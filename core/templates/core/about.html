@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - VA Cafe</title>
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/logo.jpeg' %}" alt="VA Cafe">
+        <h1>VA Ca<span>fe</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/cart/">Cart 🛒</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About VA Cafe</h2>
+        <p>Welcome to <strong>VA Cafe</strong>, your go-to place for the perfect cup of coffee, warm ambiance, and delicious treats. Founded in 2024, we are passionate about brewing experiences that bring people together.</p>
+        <p>From our carefully sourced beans to our friendly baristas, every detail is crafted to bring joy to your everyday routine. We believe that coffee is more than a drink—it's a culture, a conversation, a moment of calm in your busy life.</p>
+        <p>Join us for a cup, stay for the vibes!</p>
+      </div>
+      <div class="about-image">
+        <img src="{% static 'images/aboutus.jpg' %}" alt="About VA Cafe">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 VA Cafe. All rights reserved. | Follow us:
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

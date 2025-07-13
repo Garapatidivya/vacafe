@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VA Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/logo.jpeg' %}" alt="VA Cafe" />
+        <h1>VA Ca<span>fe</span></h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/cart/">Cart 🛒</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <div class="products-section">
+    <h2>Your <span>Cart</span></h2>
+
+    {% if products %}
+      <div class="product-grid">
+        {% for item in products %}
+          <div class="product-card">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            <h3>{{ item.name }}</h3>
+            <p class="price">₹{{ item.price }}</p>
+            <a href="{% url 'remove_from_cart' item.id %}">
+              <button class="remove-btn">Remove ❌</button>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>Your cart is empty ☕</p>
+    {% endif %}
+  </div>
+
+
+<footer class="footer">
+  <p>&copy; 2025 VA Cafe. All rights reserved. | Follow us:
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Twitter</a>
+  </p>
+</footer>
+
+</body>
+</html>
